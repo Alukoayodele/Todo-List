@@ -10,11 +10,11 @@ const TodoListItem = ({ todo, deleteTodo, setCurrent }) => {
   const handleComplete = () => {
     setIsComplete(!isComplete);
   };
-  let classes = 'btn btn-sm btn';
+  let classes = 'btn btn-sm ';
   if (isComplete) {
-    classes += '-success';
+    classes += 'green';
   } else {
-    classes += '-secondary';
+    classes += 'grey';
   }
   return (
     <li className='list-group-item'>
@@ -32,7 +32,7 @@ const TodoListItem = ({ todo, deleteTodo, setCurrent }) => {
       </button>
       <button
         type='button'
-        className='btn btn-danger btn-sm'
+        className='btn red btn-sm black-text'
         onClick={handleDelete}
         style={{ float: 'right', marginLeft: '.5rem' }}
       >
@@ -40,7 +40,7 @@ const TodoListItem = ({ todo, deleteTodo, setCurrent }) => {
       </button>
       <button
         type='button'
-        className='btn btn-warning btn-sm'
+        className='btn yellow btn-sm black-text'
         style={{ float: 'right' }}
         onClick={() => setCurrent(todo)}
       >
